@@ -42,7 +42,7 @@ class Application
     item = req.params["item"]
     # Check to see if that item is in @@items and add it to the cart, if it is.
     @@items.include?(item) ? (@@cart << item; res.write("added #{item}")) :
-                             # Otherwise give an error
+                             # Otherwise, give an error
                              res.write("We don't have that item")
   end
   # binding.pry
